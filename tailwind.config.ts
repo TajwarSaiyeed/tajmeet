@@ -20,11 +20,11 @@ const config = {
         extend: {
             colors: {
                 dark: {
-                    1: "#6b6b6b",
-                    2: "#4b4b4b"
+                    1: "#252525",
+                    2: "#3b3a3a"
                 },
                 blue: {
-                    1: '#0E78F9',
+                    1: '#0c79ff',
                 },
                 sky: {
                     1: '#C9DDFF',
