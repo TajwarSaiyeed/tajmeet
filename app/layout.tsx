@@ -14,7 +14,21 @@ export const metadata: Metadata = {
 
 const RootLayout = ({children}: Readonly<{ children: ReactNode }>) => {
     return (
-        <ClerkProvider>
+        <ClerkProvider
+            appearance={{
+                layout: {
+                    logoImageUrl: "/icons/logo.svg",
+                    socialButtonsVariant: "iconButton"
+                },
+                variables: {
+                    colorText : "#fff",
+                    colorPrimary : "#0E78F9",
+                    colorBackground: "#1c1f2e",
+                    colorInputBackground: "#252a41",
+                    colorInputText: "#fff"
+                }
+            }}
+        >
             <html lang="en">
             <body className={cn(inter.className, "bg-dark-2")}>
             {children}
