@@ -43,6 +43,9 @@ const config = {
                     1: '#F9A90E',
                 },
             },
+            backgroundImage : {
+              hero: "url('/images/hero-background.png')",
+            },
             borderRadius: {
                 lg: "var(--radius)",
                 md: "calc(var(--radius) - 2px)",
