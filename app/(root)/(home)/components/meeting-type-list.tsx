@@ -1,11 +1,11 @@
 'use client'
 import {useState} from "react";
-import {useRouter} from "next/navigation";
-import HomeCard from "@/app/(root)/(home)/components/home-card";
-import MeetingModal from "@/app/(root)/(home)/components/meeting-modal";
 import {useUser} from "@clerk/nextjs";
-import {Call, useStreamVideoClient} from "@stream-io/video-react-sdk";
+import {useRouter} from "next/navigation";
 import {useToast} from "@/components/ui/use-toast";
+import HomeCard from "@/app/(root)/(home)/components/home-card";
+import {Call, useStreamVideoClient} from "@stream-io/video-react-sdk";
+import MeetingModal from "@/app/(root)/(home)/components/meeting-modal";
 
 const MeetingTypeList = () => {
     const [meetingState, setMeetingState] = useState<'isScheduleMeeting' | 'isJoiningMeeting' | 'isInstantMeeting' | undefined>();
@@ -99,7 +99,7 @@ const MeetingTypeList = () => {
             <MeetingModal
                 isOpen={meetingState == 'isInstantMeeting'}
                 onClose={() => setMeetingState(undefined)}
-                title={'Start an instant meeting'}
+                title={'Start an Instant Meeting'}
                 className={'text-center'}
                 buttonText={'Start Meeting'}
                 handleClick={createMeeting}

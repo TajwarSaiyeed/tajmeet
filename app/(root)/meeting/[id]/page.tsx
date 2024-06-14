@@ -1,19 +1,16 @@
 'use client'
 import React, {useState} from 'react';
 import {useUser} from "@clerk/nextjs";
-import {StreamCall, StreamTheme} from "@stream-io/video-react-sdk";
-import MeetingSetup from "@/app/(root)/meeting/[id]/components/meeting-setup";
-import MeetingRoom from "@/app/(root)/meeting/[id]/components/meeting-room";
-import {useGetCallById} from "@/hooks/useGetCallById";
 import Loader from "@/components/loader";
+import {useGetCallById} from "@/hooks/useGetCallById";
+import {StreamCall, StreamTheme} from "@stream-io/video-react-sdk";
+import MeetingRoom from "@/app/(root)/meeting/[id]/components/meeting-room";
+import MeetingSetup from "@/app/(root)/meeting/[id]/components/meeting-setup";
 
 const Meeting = ({params: {id}}: { params: { id: string } }) => {
-    const { isLoaded} = useUser();
-
+    const {isLoaded} = useUser();
     const [isSetupComplete, setIsSetupComplete] = useState(false);
-
     const {call, isCallLoading} = useGetCallById(id);
-
     if (!isLoaded || isCallLoading) return <Loader/>
 
     return (

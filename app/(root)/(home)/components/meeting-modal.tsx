@@ -1,9 +1,8 @@
-import {FC, ReactNode} from "react";
-
-import {Dialog, DialogContent,} from "@/components/ui/dialog"
 import Image from "next/image";
 import {cn} from "@/lib/utils";
+import {FC, ReactNode} from "react";
 import {Button} from "@/components/ui/button";
+import {Dialog, DialogContent,} from "@/components/ui/dialog"
 
 
 interface MeetingModalProps {
