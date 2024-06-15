@@ -1,6 +1,16 @@
 import React, {ReactNode} from 'react';
 import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
+import type {Metadata} from "next";
+
+
+export const metadata: Metadata = {
+    title: "TajMeet",
+    description: "TajMeet is a platform for connecting with people.",
+    icons: {
+        icon: '/icons/logo.svg'
+    }
+};
 
 const HomeLayout = ({children}: { children: ReactNode }) => {
     return (
